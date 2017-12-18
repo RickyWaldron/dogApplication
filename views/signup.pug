@@ -1,0 +1,51 @@
+html
+	head
+		include navBar.pug
+		title Sign up #{title}
+		script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+				crossorigin="anonymous")
+
+	body
+		div(class="containerSignup")
+				input(class="textField", id="emailCheck", type="email", name="email", value="email", placeholder="email", autocomplete="off")
+				p(id="checkEmailText")
+				FORM(class="signupClass", ACTION="/signupForm", METHOD="POST")
+					input(class="textField", id="email", type="text", name="email", value="email", placeholder="email")
+					input(class="textField", id="firstname", type="text", name="firstname", value="firstname", placeholder="firstname")
+					input(class="textField", id="lastname", type="text", name="lastname", value="lastname", placeholder="lastname")
+					input(class="textField", id="age", type="text", name="age", value="age", placeholder="age")
+					input(class="textField", id="dogowner", type="text", name="dogowner", value="dogowner", placeholder="Yes/No")
+					input(class="textField", id="streetAddress", type="text", name="StreetAddress", value="Street Address", placeholder="Street Address")
+					input(class="textField", id="homeNumber", type="text", name="homeNumber", value="homeNumber", placeholder="Home number")
+					input(class="textField", id="city", type="text", name="city", value="city", placeholder="city")
+					input(class="textField", id="postCode", type="text", name="postCode", value="postcode", placeholder="Postcode")
+					input(class="textField", id="phoneNumber", type="text", name="phoneNumber", value="phoneNumber", placeholder="phoneNumber")
+					input(class="submitButton", type="submit", name="submit", value="Next step")
+
+
+
+	script.
+			$(document).ready(function() {
+				let date = Date.now()
+				$("#emailCheck").keyup(function() {
+					if (Date.now() - date >= 800){
+					date = Date.now()
+					let newEmail = $("#emailCheck").val()
+					$.ajax({
+						url:"http://localhost:3000/checkEmail",
+						type:"POST",
+						data:{email: newEmail},
+						crossdomain: true,
+						datatype: "json",
+						success: function(data, textStatus, jqXHR){
+								$("#checkEmailText").text(`Emailaddress ${data.emailCheck} is already taken`);
+								$(".emailCheck").val('');
+						},
+						error:function(result){
+							console.log("error" + result)
+						},
+					})
+				}
+			})
+		})
