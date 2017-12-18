@@ -19,7 +19,7 @@ module.exports = (app, client) => {
 					}
 				})
 			})
-		app.post('/signupClass', function(req, res) {
+		app.post('/signupForm', function(req, res) {
 			let email = req.body.email
 			let firstname = req.body.firstname
 			let lastname = req.body.lastname
@@ -39,6 +39,12 @@ module.exports = (app, client) => {
 			req.session.city = city
 			req.session.phoneNumber = phoneNumber
 			res.redirect("/signup2")
+		})
+		app.get("/signup2", (req, res) => {
+			res.render("signup2")
+		})
+		app.post('/singupForm2', function(req, res) {
+
 		})
 	}
 
