@@ -16,7 +16,7 @@ html
 					input(class="textField", id="lastname", type="text", name="lastname", value="lastname", placeholder="lastname")
 					input(class="textField", id="age", type="text", name="age", value="age", placeholder="age")
 					input(class="textField", id="dogowner", type="text", name="dogowner", value="dogowner", placeholder="Yes/No")
-					input(class="textField", id="streetAddress", type="text", name="StreetAddress", value="Street Address", placeholder="Street Address")
+					input(class="textField", id="streetAddress", type="text", name="streetAddress", value="Street Address", placeholder="Street Address")
 					input(class="textField", id="homeNumber", type="text", name="homeNumber", value="homeNumber", placeholder="Home number")
 					input(class="textField", id="city", type="text", name="city", value="city", placeholder="city")
 					input(class="textField", id="postCode", type="text", name="postCode", value="postcode", placeholder="Postcode")
@@ -39,8 +39,9 @@ html
 						crossdomain: true,
 						datatype: "json",
 						success: function(data, textStatus, jqXHR){
-								$("#checkEmailText").text(`Emailaddress ${data.emailCheck} is already taken`);
+								$("#checkEmailText").text(`Emailaddress ${data} is already taken`);
 								$(".emailCheck").val('');
+								console.log(data)
 						},
 						error:function(result){
 							console.log("error" + result)
