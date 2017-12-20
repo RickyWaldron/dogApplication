@@ -1,0 +1,158 @@
+
+.frontText {
+	text-align: center;
+	color: #3F5159;
+
+}
+	.frontText h1{
+	margin: 2px;
+	
+	}
+
+.container {
+	width: 75%;
+	margin: 0 auto;
+
+}
+
+.filling {
+	height: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+	.filling {
+		height: 0%;
+	}
+}
+
+.signup {
+    margin: 1.5%;
+    text-align: center;
+
+}
+
+
+
+.button {
+    background-color: #039694;
+    color: white;
+    border-radius: 4px;
+
+
+    border: none;
+    padding: 10px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.line{
+	width: 100%;
+	height: 2%;
+	border-bottom: 2px solid black;
+	
+}
+
+.head2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 2.5%
+}
+
+.gallary1container {
+	width: 75%;
+	height: 372px;
+	
+	
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+
+		.gallary1Image {
+			display: inline-block;
+			width: 300px;
+			height: 372px;
+			float: left;
+			
+		}
+
+
+		.gallary1Image .gallary1Image3 img {
+			display: inline-block;
+			width: 300px;
+			height: 317px;
+		}
+
+		.gallary1Image .gallary1Image3 p {
+			margin: 5px auto;
+			font-weight: bold;
+			width: 219px;
+			height: 55px;
+		}
+
+
+		.gallary1Image2 {
+
+			margin: 15% auto;
+
+			display: inline-block;
+			width: 99px;
+			height: 92.1px;
+			
+		}
+
+
+		.gallary1Image3 {
+			display: inline-block;
+			width: 300px;
+			height: 372px;
+			float: right;
+			
+		}
+
+.gallary1container2 {
+	width: 100%;
+	height: 518px;
+	background-color: green;
+	
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+.subText {
+	text-align: center;
+	color: #3F5159;
+
+}
+
+/*
+
+		#heart {
+			display: inline-block;
+			width: 5.2%;
+			height: 80%;
+			margin-left: 5% auto;
+			background-color: red;
+		}
+
+
+		.gallary2Image {
+				display: inline-block;
+				width: 23%;
+				height: 100%;
+				margin-left: 5%;
+				background-color: red;
+			}
+
+		.gallary2Image img {
+			display: inline-block;
+			width: 100%;
+			height: auto;
+		}

@@ -1,0 +1,30 @@
+html
+	head
+		link(rel='stylesheet', type='text/css', href='css/nav.css')
+
+	
+		
+		header.header1
+			a#header__icon1.header__icon1(href='#')
+			a.header__logo1(href='#') 
+				img(src="images/logotext.png" alt="logo")
+			nav.menu1
+				a(href='#') Sign Up
+				a(href='#') Login
+	
+
+	script.
+		$(document).ready(function(){
+			(function($) {
+				$('#header__icon1').click(function(e){
+					e.preventDefault();
+					$('body').toggleClass('with--sidebar');
+				});
+				
+				$('#site-cache1').click(function(e){
+					$('body').removeClass('with--sidebar');
+				});
+
+			})(jQuery);
+
+		});

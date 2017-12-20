@@ -9,6 +9,16 @@ const queryParser = require('query-parser')
 const bcrypt = require('bcrypt')
 var port = process.env.port
 
+
+
+
+// app.set('views', './views');
+// app.set('view engine', 'pug');
+// app.use(express.static('../public'));
+
+
+
+
 app.use(session({
     secret: process.env.secret,
     resave: true,
@@ -29,6 +39,13 @@ const client = new Client({
 client.connect()
 app.use(bodyParser.urlencoded())
 app.set('view engine', 'pug')
+
+
+app.use(express.static('./public'));
+
+
+
+
 require("./signup.js")(app, client)
 // require("./addMessages.js")(app, client)
 // require("./allMessages.js")(app, client)

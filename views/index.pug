@@ -1,14 +1,48 @@
 html
 	head
-		include navBar.pug
-		title Home #{title}
-		script(src="https://code.jquery.com/jquery-3.2.1.min.js"
-				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-				crossorigin="anonymous")
-
+		title Home
+		script(src="https://code.jquery.com/jquery-3.2.1.js"
+			integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+			crossorigin="anonymous"
+			)
+		link(rel='stylesheet', type='text/css', href='css/style.css')
 	body
-		div(class=signupDiv)
-			input(type="button", class="signupButton", value="Sign Up")
+		div(class="site-container1")
+		
+			
+			div(class="site-pusher1")
+				include nav.pug
+				div(class="container")
+
+					div(class="filling")
+
+					div(class="frontText")
+						h1 “Sometimes you just need a fluffy
+						h1 friend that you can 
+						h1 meet with from time to time”
+
+					div(class="gallary1container")
+							div(class='gallary1Image')
+								img(src="images/001home-doglover.png")
+								p Doglover
+								
+							div(class='gallary1Image2')
+								img(src="images/heart.png")
+
+							div(class='gallary1Image3')
+								img(src="images/002home-dog.png")
+								p Loneley Dog
+					div(class='signup')
+						input(class= "button" type="button" value="SIGN-UP !")
+
+					div(class="gallary1container2")
+						div(class='subText')
+							h1 Benefits
+
+		//- USE THIS SIGNUP BUTTON!! TO GO TO THE SIGNUP PAGE
+
+		//- div(class=signupDiv)
+		//- 	input(type="button", class="signupButton", value="Sign Up")
 
 	script.
 			$(document).ready(function() {
