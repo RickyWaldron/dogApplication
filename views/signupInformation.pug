@@ -9,7 +9,7 @@ html
 	body
 		div(class="containerSignup")
 			FORM(id="informationSignup", class="informationSignupClass", ACTION="/signupInformation", METHOD="post")
-				input(class="textField", id="email", type="hidden", name="email", value=`${email}`, placeholder="email")
+				input(class="textField", id="email", type="hidden", name="email", value=`#{email}`, placeholder="email")
 				input(class="textField", id="firstname", type="text", name="firstname", placeholder="firstname")
 				input(class="textField", id="lastname", type="text", name="lastname", placeholder="lastname")
 				input(class="textField", id="age", type="text", name="age", placeholder="age")
@@ -20,10 +20,5 @@ html
 				input(class="textField", id="postCode", type="text", name="postCode", placeholder="Postcode")
 				input(class="textField", id="phoneNumber", type="text", name="phoneNumber", placeholder="phoneNumber")
 				input(class="submitButton", type="submit", value="Next step")
-
-	script.
-		$(document).ready(function(){
-			
-		})
 
 

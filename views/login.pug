@@ -1,0 +1,13 @@
+html
+	head
+		include nav.pug
+		title Sign up step 2 #{title}
+		script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+				crossorigin="anonymous")
+
+	body
+		form(class="loginClass",action="/login", METHOD="POST")
+					input(class="textField", type="email", name="email", value="email", placeholder="email")
+					input(class="textField", type="password", name="password", password="password", placeholder="password")
+					input(class="submitButton",type="submit", name="submit", value="Login")

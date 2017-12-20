@@ -39,19 +39,11 @@ const client = new Client({
 client.connect()
 app.use(bodyParser.urlencoded())
 app.set('view engine', 'pug')
-
-
 app.use(express.static('./public'));
 
-
-
-
 require("./signup.js")(app, client)
-// require("./addMessages.js")(app, client)
-// require("./allMessages.js")(app, client)
-// require("./ownMessages.js")(app, client)
-// require("./logout.js")(app)
-// require("./comment.js")(app, client)
+require("./matching.js")(app, client)
+require("./login.js")(app, client)
 
 app.get('/', (req, res) => {
     res.render('index')
