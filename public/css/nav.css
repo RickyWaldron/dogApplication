@@ -1,0 +1,159 @@
+/* VARIABLES */
+/* BASE */
+html,
+body {
+  font-size: 1em;
+  line-height: 1.4;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #33383a;
+}
+
+.container1 {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 0 20px;
+
+}
+
+.site-content1 {
+  padding-top: 66px;
+
+}
+
+/* HEADER */
+.header1 {
+  border-bottom: 2px solid #ecedf0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 66px;
+  line-height: 66px;
+  color: #33383a;
+  background-color: white;
+
+  text-align:center;
+}
+
+.header__logo1 {
+  font-weight: 700;
+  padding: 0 25px;
+  
+}
+
+/* MENU */
+.menu1 {
+  float: right;
+}
+.menu1 a {
+  padding: 0 10px;
+}
+.menu1 a:hover {
+  color: #c5cae9;
+}
+
+.menu2 {
+  float: left;
+}
+.menu2 a {
+  padding: 0 10px;
+}
+.menu2 a:hover {
+  color: #c5cae9;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  .site-pusher1,
+  .site-container1 {
+    height: 100%;
+  }
+
+  .site-container1 {
+    overflow: hidden;
+  }
+
+  .site-pusher1 {
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  .site-content1 {
+    position: absolute;
+    top: 66px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .header1 {
+    position: static;
+  }
+
+  .header__icon1 {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50px;
+    height: 66px;
+    cursor: pointer;
+    background-color: #039694;
+  }
+  .header__icon1:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 0;
+    top: 16px;
+    left: 15px;
+    -webkit-box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+    box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+
+
+
+  }
+
+  .menu1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0);
+    /*    overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;*/
+    width: 250px;
+    -webkit-transform: translateX(-250px);
+    transform: translateX(-250px);
+  }
+  .menu1 a {
+    display: block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid #3f51b5;
+  }
+
+  .with--sidebar .site-pusher1 {
+    -webkit-transform: translateX(250px);
+    transform: translateX(250px);
+  }
+  .with--sidebar .site-cache1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0);
+  }
+}
