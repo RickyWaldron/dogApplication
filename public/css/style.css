@@ -1,5 +1,6 @@
 body {
 	color: #3F5159;
+
 }
 
 
@@ -7,7 +8,7 @@ body {
 .frontText {
 	text-align: center;
 	color: #3F5159;
-	margin-bottom: 97px;
+	margin-bottom: 50px;
 
 }
 	.frontText h1{
@@ -53,14 +54,6 @@ body {
     cursor: pointer;
 }
 
-.line{
-	margin-top: 50px;
-	width: 100%;
-	height: 1px;
-	border-bottom: 1px solid #CFD3D9;
-	
-}
-
 .head2 {
 	text-align: center;
 	font-weight: bold;
@@ -70,98 +63,79 @@ body {
 
 .gallerycontainer1 {
 	width: 75%;
-	height: 372px;
 	margin: 0 auto;
 	text-align: center;
 }
-
 		.gallery1Image {
 			display: inline-block;
-			width: 300px;
-			height: 372px;
-			margin-right: 71px;
-		}
-		.gallery1Image2 {
-			display: inline-block;
-			margin-right: 71px;
-		}
-		.gallery1Image3{
-			display: inline-block;
-			width: 300px;
-			height: 372px;			
+			width: 30%;
+			min-width: 280px;
+			height: auto;
+			box-sizing: border-box;
 		}
 
 
 
-
-.subText {
-	text-align: center;
-}
 
 .gallerycontainer2 {
-	width: 75%;
-	height: 518px;
-	background-color: green;
-	
+	width: 100%;
+	height: auto;
+	min-height: 550px;
 	margin: 0 auto;
 	text-align: center;
+	background-color: #F0F2F2;
 }
+	.subText {
+	padding-top: 30px;
+	text-align: center;
 
-
-
+	}
+	.line1 {
+		width: 80%;
+		border-bottom: 1px solid #039694;
+		margin: 0 auto;
+	}
 	.gallery2Image {
 		display: inline-block;
 		width: 300px;
-		height: 518px;
+		height: 350px;
+		min-width: 300px;
+		box-sizing: border-box;
+		margin-left: 75px;
+  		margin-right: 75px;
+    	margin-top: 10px;
 
-		background-color: red;
 	}
-
-	.gallery2Image2 {
-		display: inline-block;
-		width: 300px;
-		height: 518px;
-
-		background-color: red;
-	}
-
-
-
-	.gallery2Image3 {
-		display: inline-block;
-		width: 300px;
-		height: 518px;
-
-		background-color: red;
+	.gallery2Image img{
+		width: 250px;
+		height: 250px;
 	}
 
 
-
-
-
-
-
-/*
-
-		#heart {
-			display: inline-block;
-			width: 5.2%;
-			height: 80%;
-			margin-left: 5% auto;
-			background-color: red;
-		}
-
-
-		.gallary2Image {
-				display: inline-block;
-				width: 23%;
-				height: 100%;
-				margin-left: 5%;
-				background-color: red;
-			}
-
-		.gallary2Image img {
-			display: inline-block;
-			width: 100%;
+.gallerycontainer3 {
+	width: 75%;
+	margin: 0 auto;
+	text-align: center;
+}
+		.gallery3Image1 {
+			float: left;
+			width: 300px;
+			height: 350px;
 			height: auto;
+			box-sizing: border-box;
+			margin-left: 100px;
 		}
+		.gallery3Image2 {
+			float: right;
+			width: 300px;
+			height: 350px;
+			height: auto;
+			box-sizing: border-box;
+			margin-right: 100px;
+		}
+
+
+
+
+
+
