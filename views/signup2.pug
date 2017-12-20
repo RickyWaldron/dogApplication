@@ -15,8 +15,8 @@ html
 				form(class="signupSheetDog", ACTION="/signupFormDog", method="POST", enctype="multipart/form-data")
 					input(class="dogname", type="text", name="dogname", value="dogname")
 					input(class="aboutDog", type="text", name=about, placeholder="About dog")
-					input(class="dogProfilePicture", id="dogProfilePicture", type="file", name="dogProfilePicture", accept="image/*", onchange="loadFile(event)")
-					img(class="outputDogPicture")
+					//- input(class="dogProfilePicture", id="dogProfilePicture", type="file", name="dogProfilePicture", accept="image/*", onchange="loadFile(event)")
+					//- img(class="outputDogPicture")
 					div(class="containerDogButtons")
 						input(id="smallDogButton", class="dogButton", type="checkbox", name="smallDogButton", value="small")
 						label(for="smallDogButton")
@@ -31,8 +31,8 @@ html
 			div(class="containerSignupSheetPerson")
 				Form(class="signupSheetDogLover", ACTION="/signupFormDogLover", method="POST", enctype="multipart/form-data")
 					input(class="aboutMe", type="text", name=about, placeholder="About me")
-					input(class="profilePicture", id="profilePicture", type="file", name="profilePicture", accept="image/*", onchange="loadFile2(event)")
-					img(class="outputProfilePicture")
+					//- input(class="profilePicture", id="profilePicture", type="file", name="profilePicture", accept="image/*", onchange="loadFile2(event)")
+					//- img(class="outputProfilePicture")
 					div(class="containerDogButtons")
 						input(id="smallDogLoverButton", class="dogButton", type="checkbox", name="smallDogButton", value="small")
 						label(for="smallDogLoverButton")
@@ -53,17 +53,17 @@ html
 				$(".dogProfileButton").click(function(){
 					$(".signupSheetDog").show()
 					$(".signupSheetDogLover").hide()
-					var loadFile = function(event) {
-					var output = document.getElementById('outputDogPicture')
-					output.src = URL.createObjectURL(event.target.files[0])
-					}
-				})
+					//- var loadFile = function(event) {
+					//- var output = document.getElementById('outputDogPicture')
+					//- output.src = URL.createObjectURL(event.target.files[0])
+					})
+				
 				$(".profileButton").click(function(){
 					$(".signupSheetDogLover").show()
 					$(".signupSheetDog").hide()
-					let loadFile2 = function(event) {
-					var output = document.getElementById('outputProfilePicture')
-					output.src = URL.createObjectURL(event.target.files[0])
-					}
+					//- let loadFile2 = function(event) {
+					//- var output = document.getElementById('outputProfilePicture')
+					//- output.src = URL.createObjectURL(event.target.files[0])
+					
 				})
 			})

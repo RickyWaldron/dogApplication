@@ -71,13 +71,15 @@ module.exports = (app, client) => {
 			})
 		})
 
-
 		app.post('/signupFormDog', function(req, res) {
 			let dogname = req.body.dogname
 			let aboutDog = req.body.about
 			let smallDog = req.body.smallDogButton
 			let mediumDog = req.body.mediumDogButton
 			let largeDog = req.body.largeDogButton
+			console.log(dogname)
+			console.log(aboutDog)
+			console.log("small" + smallDog + "medium" + mediumDog + "large" + largeDog)
 			// let pictureDog = // let picture = Store picture somewhere
 		})
 		app.post('/signupFormDoglover', function(req, res) {
