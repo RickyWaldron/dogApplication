@@ -21,32 +21,64 @@ html
 						h1 friend that you can 
 						h1 meet with from time to time”
 
-					div(class="gallary1container")
-							div(class='gallary1Image')
+					div(class="gallerycontainer1")
+							div(class='gallery1Image')
 								img(src="images/001home-doglover.png")
 								p Doglover
 								
-							div(class='gallary1Image2')
+							div(class='gallery1Image')
 								img(src="images/heart.png")
 
-							div(class='gallary1Image3')
+							div(class='gallery1Image')
 								img(src="images/002home-dog.png")
-								p Loneley Dog
+								p Lonley Dog
 					div(class='signup')
-						input(class= "button" type="button" value="SIGN-UP !")
+						input(class= "button" id="signupButton" type="button" value="SIGN-UP !")
+					div(class="filling")
 
-					div(class="gallary1container2")
+
+					div(class="gallerycontainer2")
 						div(class='subText')
-							h1 Benefits
+							h2 Benefits
 
-		//- USE THIS SIGNUP BUTTON!! TO GO TO THE SIGNUP PAGE
+						div(class="gallery2Image")
+							img(src="images/003home-local.png")
+							h2 Local
+							p(class="line1")
+							p A short description of the benefits of using this service.
 
-		//- div(class=signupDiv)
-		//- 	input(type="button", class="signupButton", value="Sign Up")
+						div(class="gallery2Image")
+							img(src="images/004home-cosy.png")
+							h2 cosy
+							p(class="line1")
+							p Sometimes you just want to have a reason to go out for a walk in the park.
+						div(class="gallery2Image")
+							img(src="images/005home-convenient.png")
+							h2 convenient
+							p(class="line1")
+							p You can choose when you are available and enjoy your part time friend. 
+
+					div(class="gallerycontainer3")
+						div(class='subText')
+							h2 THEY JOINED ALREADY
+
+						div(class="gallery3Image1")
+							img(src="images/006home-charmer.jpg")
+							h2 Charmer & John
+							p(class="line1")
+							p "Since I met Charmer, I am happy everyday"
+
+						div(class="gallery3Image2")
+							img(src="images/007home-anita.jpg")
+							h2 Bello & Anita
+							p(class="line1")
+							p "My Friday with Bello is the most fun day of the week!"
+
+
 
 	script.
 			$(document).ready(function() {
-				$(".signupButton").click(function(){
+				$("#signupButton").click(function(){
 					window.location.assign("/signup")
 				})
 			})

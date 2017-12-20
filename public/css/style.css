@@ -1,7 +1,14 @@
+body {
+	color: #3F5159;
+
+}
+
+
 
 .frontText {
 	text-align: center;
 	color: #3F5159;
+	margin-bottom: 50px;
 
 }
 	.frontText h1{
@@ -10,7 +17,7 @@
 	}
 
 .container {
-	width: 75%;
+	width: 100%;
 	margin: 0 auto;
 
 }
@@ -26,8 +33,11 @@
 }
 
 .signup {
-    margin: 1.5%;
+    
+    width: 75%;
+    margin: 0 auto;
     text-align: center;
+   
 
 }
 
@@ -37,23 +47,11 @@
     background-color: #039694;
     color: white;
     border-radius: 4px;
-
-
     border: none;
     padding: 10px 35px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}
-
-.line{
-	width: 100%;
-	height: 2%;
-	border-bottom: 2px solid black;
-	
 }
 
 .head2 {
@@ -63,96 +61,81 @@
 	margin-top: 2.5%
 }
 
-.gallary1container {
+.gallerycontainer1 {
 	width: 75%;
-	height: 372px;
-	
-	
 	margin: 0 auto;
 	text-align: center;
 }
-
-
-
-		.gallary1Image {
+		.gallery1Image {
 			display: inline-block;
-			width: 300px;
-			height: 372px;
-			float: left;
-			
-		}
-
-
-		.gallary1Image .gallary1Image3 img {
-			display: inline-block;
-			width: 300px;
-			height: 317px;
-		}
-
-		.gallary1Image .gallary1Image3 p {
-			margin: 5px auto;
-			font-weight: bold;
-			width: 219px;
-			height: 55px;
-		}
-
-
-		.gallary1Image2 {
-
-			margin: 15% auto;
-
-			display: inline-block;
-			width: 99px;
-			height: 92.1px;
-			
-		}
-
-
-		.gallary1Image3 {
-			display: inline-block;
-			width: 300px;
-			height: 372px;
-			float: right;
-			
-		}
-
-.gallary1container2 {
-	width: 100%;
-	height: 518px;
-	background-color: green;
-	
-	margin: 0 auto;
-	text-align: center;
-}
-
-
-.subText {
-	text-align: center;
-	color: #3F5159;
-
-}
-
-/*
-
-		#heart {
-			display: inline-block;
-			width: 5.2%;
-			height: 80%;
-			margin-left: 5% auto;
-			background-color: red;
-		}
-
-
-		.gallary2Image {
-				display: inline-block;
-				width: 23%;
-				height: 100%;
-				margin-left: 5%;
-				background-color: red;
-			}
-
-		.gallary2Image img {
-			display: inline-block;
-			width: 100%;
+			width: 30%;
+			min-width: 280px;
 			height: auto;
+			box-sizing: border-box;
 		}
+
+
+
+
+.gallerycontainer2 {
+	width: 100%;
+	height: auto;
+	min-height: 550px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #F0F2F2;
+}
+	.subText {
+	padding-top: 30px;
+	text-align: center;
+
+	}
+	.line1 {
+		width: 80%;
+		border-bottom: 1px solid #039694;
+		margin: 0 auto;
+	}
+	.gallery2Image {
+		display: inline-block;
+		width: 300px;
+		height: 350px;
+		min-width: 300px;
+		box-sizing: border-box;
+		margin-left: 75px;
+  		margin-right: 75px;
+    	margin-top: 10px;
+
+	}
+	.gallery2Image img{
+		width: 250px;
+		height: 250px;
+	}
+
+
+.gallerycontainer3 {
+	width: 75%;
+	margin: 0 auto;
+	text-align: center;
+}
+		.gallery3Image1 {
+			float: left;
+			width: 300px;
+			height: 350px;
+			height: auto;
+			box-sizing: border-box;
+			margin-left: 100px;
+		}
+		.gallery3Image2 {
+			float: right;
+			width: 300px;
+			height: 350px;
+			height: auto;
+			box-sizing: border-box;
+			margin-right: 100px;
+		}
+
+
+
+
+
+
