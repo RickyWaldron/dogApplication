@@ -9,8 +9,20 @@ html
 			a.header__logo1(href='#') 
 				img(src="images/logotext.png" alt="logo")
 			nav.menu1
-				a(href='#') Sign Up
-				a(href='#') Login
+				if(email)
+					a(href="/profile") profile
+					a(href="/match") Dog Matches
+					a(href="/matchPersons") Dog Friends
+					a
+						form(method="POST" action="logout" class="logout")
+							input(type="submit" id="submit" value="logout")
+
+
+
+				else if(!email)
+
+					a(href='/signup') Sign Up
+					a(href='/login') Login
 	
 
 	script.
