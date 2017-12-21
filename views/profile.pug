@@ -1,18 +1,20 @@
 html
 	head
-		include nav.pug
+		//- include nav.pug
 		title Profile page #{title}
 		script(src="https://code.jquery.com/jquery-3.2.1.min.js"
 				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 				crossorigin="anonymous")
 
 	body
-		//- div(class="containerProfile")
-		//- 	div(class="profileInfo") #{userinfo[0].rows.firstname}
-		//- 	div(class="profileInfo") #{userinfo[0].rows.about}
-		//- 	div(class="profileInfo")
-		//- 		img(class="profilePicture", src=userinfo[0].rows.picture)
-		//- 	div(class="dogInfo") #{userinfo[0].rows.firstname}
-		//- 	div(class="dogInfo") #{userinfo[0].rows.about}
-		//- 	div(class="dogInfo")
-		//- 		img(class="dogProfilePicture", src=userinfo[0].rows.picture)
+		div(class="containerProfile")
+			- for (var i=0; i < userinfo[0].rows.length; i++)
+				div(class="profileInfo") #{userinfo[0].rows[i].firstname}
+				div(class="profileInfo") #{userinfo[0].rows[i].about}
+				div(class="profileInfo")
+					img(class="profilePicture", src=userinfo[0].rows[i].picture)
+			- for (var j=0; j < doginfo[0].rows.length; j++)
+				div(class="dogInfo") #{doginfo[0].rows[j].dogname}
+				div(class="dogInfo") #{doginfo[0].rows[j].aboutdog}
+				div(class="dogInfo")
+					img(class="dogProfilePicture", src=doginfo[0].rows[j].picture)
