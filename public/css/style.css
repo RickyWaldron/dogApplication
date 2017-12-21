@@ -58,6 +58,11 @@ p {
     cursor: pointer;
 }
 
+.button:hover {
+		background-color: #0d4a49;
+	}
+
+
 .head2 {
 	text-align: center;
 	font-weight: bold;
