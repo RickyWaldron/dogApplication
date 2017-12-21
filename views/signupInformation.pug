@@ -1,6 +1,6 @@
 html
 	head
-		include nav.pug
+		//- include nav.pug
 		title Personal details #{title}
 		script(src="https://code.jquery.com/jquery-3.2.1.min.js"
 				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -9,21 +9,16 @@ html
 	body
 		div(class="containerSignup")
 			FORM(id="informationSignup", class="informationSignupClass", ACTION="/signupInformation", METHOD="post")
-				input(class="textField", id="email", type="hidden", name="email", value=`${email}`, placeholder="email")
+				input(class="textField", id="email", type="hidden", name="email", value=`#{email}`, placeholder="email")
 				input(class="textField", id="firstname", type="text", name="firstname", placeholder="firstname")
 				input(class="textField", id="lastname", type="text", name="lastname", placeholder="lastname")
 				input(class="textField", id="age", type="text", name="age", placeholder="age")
 				input(class="textField", id="dogowner", type="text", name="dogowner", placeholder="Yes/No")
-				input(class="textField", id="streetAddress", type="textxt", name="streetAddress", placeholder="Street Address")
+				input(class="textField", id="streetAddress", type="text", name="streetAddress", placeholder="Street Address")
 				input(class="textField", id="homeNumber", type="text", name="homeNumber", placeholder="Home number")
 				input(class="textField", id="city", type="text", name="city", placeholder="city")
 				input(class="textField", id="postCode", type="text", name="postCode", placeholder="Postcode")
 				input(class="textField", id="phoneNumber", type="text", name="phoneNumber", placeholder="phoneNumber")
 				input(class="submitButton", type="submit", value="Next step")
-
-	script.
-		$(document).ready(function(){
-			
-		})
 
 

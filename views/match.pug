@@ -1,0 +1,15 @@
+html
+	head
+		//- include nav.pug
+		title Best matches #{title}
+		script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+				crossorigin="anonymous")
+
+	body
+		div(class="containerMatchGallery")
+			- for (var i=0; i < allMatches[0].rows.length; i++)
+				div(class="match") #{allMatches[0].rows[i].dogname}
+				div(class="match") #{allMatches[0].rows[i].aboutdog}
+				div(class="match")
+					img(class="matchPicture", src=allMatches[0].rows[i].picture)
