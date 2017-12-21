@@ -1,6 +1,6 @@
 html
 	head
-		include nav.pug
+		//- include nav.pug
 		title Sign up step 2 #{title}
 		script(src="https://code.jquery.com/jquery-3.2.1.min.js"
 				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -15,7 +15,8 @@ html
 				form(class="signupSheetDog", ACTION="/signupFormDog", method="POST", enctype="multipart/form-data")
 					input(class="dogname", type="text", name="dogname", value="dogname")
 					input(class="aboutDog", type="text", name="about", placeholder="About dog")
-					//- input(class="dogProfilePicture", id="dogProfilePicture", type="file", name="dogProfilePicture", accept="image/*", onchange="loadFile(event)")
+					input(class="dogProfilePicture", id="dogProfilePicture", type="file", name="dogProfilePicture")
+					//- , accept="image/*", onchange="loadFile(event)")
 					//- img(class="outputDogPicture")
 					div(class="containerDogButtons")
 						input(id="smallDogButton", class="dogButton", type="checkbox", name="smallDogButton", value="small")
@@ -31,7 +32,8 @@ html
 			div(class="containerSignupSheetPerson")
 				Form(class="signupSheetDogLover", ACTION="/signupFormDogLover", method="POST")
 					input(class="aboutMe", type="text", name="about", placeholder="About me")
-					//- input(class="profilePicture", id="profilePicture", type="file", name="profilePicture", accept="image/*", onchange="loadFile2(event)")
+					input(class="profilePicture", id="profilePicture", type="file", name="profilePicture")
+					//- , accept="image/*", onchange="loadFile2(event)")
 					//- img(class="outputProfilePicture")
 					div(class="containerDogButtons")
 						input(id="smallDogLoverButton", class="dogButton", type="checkbox", name="smallDogButton", value="small")

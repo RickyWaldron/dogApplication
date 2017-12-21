@@ -11,7 +11,6 @@ module.exports = (app, client) => {
         	text: (`SELECT password from users WHERE email='${email}'`)
         }
         client.query(hashQuery, (errorHash, resultHash) => {
-        	console.log("the resultHash" + resultHash.rows[0].password)
         	bcrypt.compare(password, resultHash.rows[0].password, function(err, resultH) {
 			 	if (resultH == true) {
         		const query = {

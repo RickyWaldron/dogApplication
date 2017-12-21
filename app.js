@@ -7,16 +7,9 @@ var session = require('express-session')
 const bodyParser = require('body-parser')
 const queryParser = require('query-parser')
 const bcrypt = require('bcrypt')
+const multer = require('multer')
+var upload = multer({ dest: 'uploads/' })
 var port = process.env.port
-
-
-
-
-// app.set('views', './views');
-// app.set('view engine', 'pug');
-// app.use(express.static('../public'));
-
-
 
 
 app.use(session({
@@ -39,11 +32,12 @@ const client = new Client({
 client.connect()
 app.use(bodyParser.urlencoded())
 app.set('view engine', 'pug')
-app.use(express.static('./public'));
+app.use(express.static('public'));
 
 require("./signup.js")(app, client)
 require("./matching.js")(app, client)
 require("./login.js")(app, client)
+require("./profile.js")(app, client)
 
 app.get('/', (req, res) => {
     res.render('index')
