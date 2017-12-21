@@ -9,7 +9,7 @@ module.exports = (app, client) => {
 				let allMatches = []
 				console.log(result.rows)
 				allMatches.push(result)
-				res.render("match", {allMatches: allMatches})
+				res.render("match", {email: req.session.email, allMatches: allMatches})
 			})
 		})
 	})
@@ -22,7 +22,7 @@ module.exports = (app, client) => {
 				let allMatches = []
 				console.log(result.rows)
 				allMatches.push(result)
-				res.render("matchPersons", {allMatches: allMatches})
+				res.render("matchPersons", {email: req.session.email, allMatches: allMatches})
 				})
 			})
 		})

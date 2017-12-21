@@ -7,7 +7,7 @@ html
 			crossorigin="anonymous"
 			)
 		link(rel='stylesheet', type='text/css', href='css/style.css')
-		link(rel='stylesheet', type='text/css', href='css/login.css')
+		link(rel='stylesheet', type='text/css', href='css/match.css')
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet")
 
 	body
@@ -15,13 +15,14 @@ html
 			div(class="site-pusher1")
 				include nav.pug
 				div(class="container")
-					h2(class="h2") Find your match
-					div(class="containerMatchGallery")
-						- for (var i=0; i < allMatches[0].rows.length; i++)
-							div(class="oneMatch")
-								div(class="match")
-									img(class="matchPicture", src=allMatches[0].rows[i].picture)
-								div(class="match" id="firstname") #{allMatches[0].rows[i].firstname}
-								div(class="match" id="aboutme") #{allMatches[0].rows[i].about}
-					div(class="containerMap")
-						img(class="map", src="/images/map.png")
+					div(class="filling")
+						h2(class="h2") Find your match
+						div(class="containerMatchGallery")
+							- for (var i=0; i < allMatches[0].rows.length; i++)
+								div(class="oneMatch")
+									div(class="match")
+										img(class="matchPicture", src=allMatches[0].rows[i].picture)
+									div(class="match" id="firstname") #{allMatches[0].rows[i].firstname}
+									div(class="match" id="aboutme") #{allMatches[0].rows[i].about}
+						div(class="containerMap")
+							img(class="map", src="/images/map.png")
