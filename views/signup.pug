@@ -1,21 +1,42 @@
 html
 	head
-		include nav.pug
-		title Sign up #{title}
-		script(src="https://code.jquery.com/jquery-3.2.1.min.js"
-				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-				crossorigin="anonymous")
-
+		title Sign Up
+		script(src="https://code.jquery.com/jquery-3.2.1.js"
+			integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+			crossorigin="anonymous"
+			)
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		link(rel='stylesheet', type='text/css', href='css/formpages.css')
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet")
 	body
-		div(class="containerSignup")
-			form(id="firstSignup", class="signupClass" ACTION="/signup")
-				input(class="textField", id="email", type="email", name="email", value="email", placeholder="email")
-				p(id="checkEmailText")
-				input(class="textField", id="password", type="password", name="password", password="password", placeholder="password")
-				input(class="textField", id="passwordCheck", type="password", name="passwordCheck", password="password", placeholder="password check")
-				input(class="submitButton", type="submit", name="submit", value="Next step")
-				h2(id="text")
-				h2(id="success")
+		div(class="site-container1")
+			div(class="site-pusher1")
+				include nav.pug
+				div(class="container")
+					div(class="filling")
+
+
+
+					div(class="containerSignup")
+						div(class="frontText")
+							h1 Sign up for a dog friend!
+						div(class="formDIV")
+							form(id="firstSignup", class="signupClass" ACTION="/signup")
+								div(class="formElement")
+									p(class="title") E-mail:
+									input(class="textField", id="email", type="email", name="email", value="email", placeholder="email")
+									p(id="checkEmailText")
+								div(class="formElement")
+								div(class="formElement")
+									p(class="title") Password:
+									input(class="textField", id="password", type="password", name="password", password="password", placeholder="password")
+								div(class="formElement" id="repTitle")
+									p(class="title" ) Repeat Password:
+									input(class="textField", id="passwordCheck", type="password", name="passwordCheck", password="password", placeholder="password check")
+								div(class="divbutton")
+									input(id="button" class="submitButton", type="submit", name="submit", value="Next step")
+									h2(id="text")
+									h2(id="success")
 
 
 	script.

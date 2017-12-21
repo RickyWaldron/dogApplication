@@ -1,6 +1,10 @@
 body {
 	color: #3F5159;
+	font-family: 'Oswald', sans-serif;
+}
 
+p {
+	font-family: 'Open Sans', sans-serif;
 }
 
 
