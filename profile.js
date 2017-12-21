@@ -8,13 +8,12 @@ module.exports = (app, client) => {
 			}
 			client.query(query, (error, result) => {
 				let userinfo = []
-				userinfo.push(result.rows)
-				console.log(result.rows[0].id)
+				userinfo.push(result)
 				userId = result.rows[0].id
 				client.query(`SELECT * FROM dogs WHERE user_id='${userId}'`, (error, result) => {
-					let dogInfo = []
-					dogInfo.push(result.rows)
-				res.render("profile", {email: req.session.email, userinfo: userinfo, dogInfo: dogInfo})
+					let doginfo = []
+					doginfo.push(result)
+				res.render("profile", {email: req.session.email, userinfo: userinfo, doginfo: doginfo})
 				})	
 			})
 		})
