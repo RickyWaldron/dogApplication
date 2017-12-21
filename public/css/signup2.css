@@ -14,13 +14,11 @@ input {
 	border: 1px solid #CFD3D9;
 }
 
-
 .filling {
 	height: 10%;
 }
 
 .frontText {
-	
 	font-family: 'Oswald', sans-serif;
 	text-align: center;
 	color: #3F5159;
@@ -29,46 +27,53 @@ input {
 
 }
 
-
-
 .containerSignup {
 	width: 70%;
 	height: auto;
 	margin: 100px auto;
 	background-color: white;
 	min-height: 310px;
+	text-align: center
 
 }
 	.formDIV {
-		width: 70%
+		width: 100%;
 		height: auto;
-		min-height:310px;
 		margin: 0 auto;
+		background-color: ;
 	}
-
 
 	.formElement {
 		font-size: 80%;
 		font-weight: bold;
 	    color: #5a5854;
-	    margin-bottom: 0;
-	    width: 210px;
-	    display: inline-block;
-	    margin-left: 19%;
+	    width: 100%;
+	    
+	    margin-bottom: 30px;    
 	}
 
-	#repTitle {
-		margin-left: 20px;
+	#aboutDog {
+		width: 400px;
+		height: 150px;
 	}
 
-	.formElement p {
-		margin-bottom: 2px;
+	.UploadPictureDiv {
+		width: 100%;
+		height: auto;
+		min-height:310px;
+		margin: 0 auto;
 	}
 
-	.firstSignup input:focus {
-		background-color: #ffffff;
-		border: 1px solid #b1e1e4;
+	.dogProfilePicture {
+		display: none;
 	}
+
+	.profilePicture {
+		display: none;
+	}
+
+
+
 
 	#button {
 		width: 175px;
@@ -98,6 +103,58 @@ input {
 		text-align: center;
 
 	}
+
+
+
+	.containerDogButtons {
+		width: 100%;
+		height: auto;
+		min-height: 250px;
+		text-align: center;
+	}
+
+	.DogSeizeButtonsDiv {
+	    display: inline-block;
+	    width: 25%;
+	    min-width: 200px;
+	    height: auto;
+	    margin: 1%;
+	    margin-top: 20px;
+	    box-sizing: border-box;
+	}
+
+
+.display {
+	display: none;
+}
+
+
+
+
+
+
+/*
+.check_box + label{
+    background:url('images/check-box.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+
+	.formElement {
+		font-size: 80%;
+		font-weight: bold;
+	    color: #5a5854;
+	    margin-bottom: 0;
+	    width: 100%;
+	    display: inline-block;
+	    margin-left: 19%;
+	}
+
+
+
 
 
 

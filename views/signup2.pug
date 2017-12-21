@@ -1,54 +1,107 @@
 html
 	head
-		//- include nav.pug
-		title Sign up step 2 #{title}
-		script(src="https://code.jquery.com/jquery-3.2.1.min.js"
-				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-				crossorigin="anonymous")
+		title Sign Up Information
+		script(src="https://code.jquery.com/jquery-3.2.1.js"
+			integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+			crossorigin="anonymous"
+			)
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		link(rel='stylesheet', type='text/css', href='css/signup2.css')
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet")
 
 	body
-		p hello #{email}
-		div(class="containerSignup")
-			input(class="dogProfileButton", type="button", name="dogProfileButton", value="Dog")
-			input(class="profileButton", type="button", name="profileButton", value="Dog lover")
-			div(class="containerSignupSheetDog")
-				form(class="signupSheetDog", ACTION="/signupFormDog", method="POST", enctype="multipart/form-data")
-					input(class="dogname", type="text", name="dogname", value="dogname")
-					input(class="aboutDog", type="text", name="about", placeholder="About dog")
-					input(class="dogProfilePicture", id="dogProfilePicture", type="file", name="dogProfilePicture")
-					//- , accept="image/*", onchange="loadFile(event)")
-					//- img(class="outputDogPicture")
-					div(class="containerDogButtons")
-						input(id="smallDogButton", class="dogButton", type="checkbox", name="smallDogButton", value="small")
-						label(for="smallDogButton")
-							img(src='http://cf.ltkcdn.net/dogs/images/slide/208198-850x567-Bulmasstiff.jpg')
-						input(id="mediumDogButton", class="dogButton", type="checkbox", name="mediumDogButton", value="medium")
-						label(for="mediumDogButton")
-							img(src='http://cf.ltkcdn.net/dogs/images/slide/208198-850x567-Bulmasstiff.jpg')
-						input(id="largeDogButton", class="dogButton", type="checkbox", name="largeDogButton", value="large")
-						label(for="largeDogButton")
-							img(src='http://cf.ltkcdn.net/dogs/images/slide/208198-850x567-Bulmasstiff.jpg')
-					input(class="submitButton", type="submit", value="Next step")
-			div(class="containerSignupSheetPerson")
-				Form(class="signupSheetDogLover", ACTION="/signupFormDogLover", method="POST")
-					input(class="aboutMe", type="text", name="about", placeholder="About me")
-					input(class="profilePicture", id="profilePicture", type="file", name="profilePicture")
-					//- , accept="image/*", onchange="loadFile2(event)")
-					//- img(class="outputProfilePicture")
-					div(class="containerDogButtons")
-						input(id="smallDogLoverButton", class="dogButton", type="checkbox", name="smallDogButton", value="small")
-						label(for="smallDogLoverButton")
-							img(src='http://cf.ltkcdn.net/dogs/images/slide/208198-850x567-Bulmasstiff.jpg')
-						input(id="mediumDogLoverButton", class="dogButton", type="checkbox", name="mediumDogButton", value="medium")
-						label(for="mediumDogLoverButton")
-							img(src='http://cf.ltkcdn.net/dogs/images/slide/208198-850x567-Bulmasstiff.jpg')
-						input(id="largeDogLoverButton", class="dogButton", type="checkbox", name="largeDogButton", value="large")
-						label(for="largeDogLoverButton")
-							img(src='http://cf.ltkcdn.net/dogs/images/slide/208198-850x567-Bulmasstiff.jpg')
-					input(class="submitButton", type="submit", value="Next step")
+		div(class="site-container1")
+			div(class="site-pusher1")
+				include nav.pug
+				div(class="container")
+					div(class="filling")
+
+						p hello #{email}
+						div(class="containerSignup")
+							div(class="frontText")
+								h1 Make your profile complete!
+							div(class="divbutton")
+								input(id="button" class="dogProfileButton", type="button", name="dogProfileButton", value="Dog")
+								input(id="button"  class="profileButton", type="button", name="profileButton", value="A Dog Friend")
+
+							div(class="formDIV")
+								div(class="containerSignupSheetDog")
+									form(class="signupSheetDog", ACTION="/signupFormDog", method="POST", enctype="multipart/form-data")
+										div(class="formElement")
+											p(class="title") Please enter the name of your Dog:
+											input(class="dogname", type="text", name="dogname", value="dogname")
+										
+										div(class="formElement")
+											p(class="title") Tell something about your Dog:
+											input(class="aboutDog", type="text", name="about", placeholder="About dog" id="aboutDog")
+
+										div(class="UploadPictureDiv")
+											p(class="title") Upload a picture of your Dog!
+
+											input(class="dogProfilePicture", id="dogProfilePicture", type="file", name="dogProfilePicture")
+											label(for="dogProfilePicture")
+												img(src="images/form_addimg.png")
+											//- , accept="image/*", onchange="loadFile(event)")
+											//- img(class="outputDogPicture")
+										div(class="containerDogButtons")
+											p(class="title") What size is your Dog?
+											div(class="DogSeizeButtonsDiv")
+												input(id="smallDogButton", class="dogButton", type="checkbox", name="smallDogButton", value="small")
+												label(for="smallDogButton")
+													img(src='images/form_toggle_small.png' id="sDog" onclick="test()")
+											div(class="DogSeizeButtonsDiv")
+												input(id="mediumDogButton", class="dogButton", type="checkbox", name="mediumDogButton", value="medium")
+												label(for="mediumDogButton")
+													img(src='images/form_toggle_MEDIUM.png' id="mDog" )
+											div(class="DogSeizeButtonsDiv")
+												input(id="largeDogButton", class="dogButton", type="checkbox", name="largeDogButton", value="large")
+												label(for="largeDogButton")
+													img(src='images/form_toggle_large.png' id="lDog")
+										input(id="button" class="submitButton", type="submit", value="Next step")
+
+							div(class="formDIV")
+								div(class="containerSignupSheetPerson")
+									Form(class="signupSheetDogLover", ACTION="/signupFormDogLover", method="POST")
+										div(class="formElement")
+											p(class="title") Please tell us something about yourself:
+											input(class="aboutMe", type="text", name="about", placeholder="About me" id="aboutDog")
+
+										div(class="UploadPictureDiv")
+											p(class="title") Upload a profile picture!
+											input(class="profilePicture", id="profilePicture", type="file", name="profilePicture")
+											label(for="profilePicture")
+												img(src="images/form_addimg.png")
+										//- , accept="image/*", onchange="loadFile2(event)")
+										//- img(class="outputProfilePicture")
+										div(class="containerDogButtons")
+											p(class="title") What is your Dog size preference?
+											div(class="DogSeizeButtonsDiv")
+												input(id="smallDogLoverButton", class="dogButton", type="checkbox", name="smallDogButton", value="small")
+												label(for="smallDogLoverButton")
+													img(src='images/form_toggle_small.png')
+											div(class="DogSeizeButtonsDiv")
+												input(id="mediumDogLoverButton", class="dogButton", type="checkbox", name="mediumDogButton", value="medium")
+												label(for="mediumDogLoverButton")
+													img(src='images/form_toggle_MEDIUM.png')
+											div(class="DogSeizeButtonsDiv")
+												input(id="largeDogLoverButton", class="dogButton", type="checkbox", name="largeDogButton", value="large")
+												label(for="largeDogLoverButton")
+													img(src='images/form_toggle_large.png')
+
+										input(class="submitButton", id="button" type="submit", value="Next step")
 
 
 	script.
+
+			//- function test() {
+			//- 		console.log("small dog")
+			//- 		$("#sDog").attr('src', "images/form_toggle_small-sel.png")
+			//- 		$('input[type="checkbox"]').not("#smallDogButton").prop('checked', false);
+
+			
+			//- 	}
+
+
 			$(document).ready(function() {
 				$(".signupSheetDog").hide()
 				$(".signupSheetDogLover").hide()
@@ -68,4 +121,9 @@ html
 					//- output.src = URL.createObjectURL(event.target.files[0])
 					
 				})
-			})
+
+			});
+
+
+
+
