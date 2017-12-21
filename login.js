@@ -20,7 +20,7 @@ module.exports = (app, client) => {
             	if (error) throw error
             	if (result.rows.length == 1){
             		req.session.email = email
-            		res.redirect('profile')
+            		res.redirect('match')
             	}
             	else {
             		res.send("No user exists with this username")
