@@ -1,6 +1,8 @@
+
 body {
 	color: #3F5159;
 	font-family: 'Oswald', sans-serif;
+
 }
 
 p {
@@ -14,11 +16,15 @@ input {
 	border: 1px solid #CFD3D9;
 }
 
+#wbackground {
+	background-color: white;
+}
 
 .frontText {
 	text-align: center;
 	color: #3F5159;
 	margin-bottom: 50px;
+	background-color: #F0F2F2;
 
 }
 	.frontText h1{
@@ -36,7 +42,7 @@ input {
 	height: 10%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 912px) {
 	.filling {
 		height: 0%;
 	}
@@ -44,11 +50,14 @@ input {
 
 .signup {
     
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
-   
-
+   	background-color: white;
+}
+.filling1 {
+	height: 20px;
+	background-color: white;
 }
 
 
@@ -77,30 +86,31 @@ input {
 }
 
 .gallerycontainer1 {
-	width: 75%;
+	width: 100%;
 	margin: 0 auto;
 	text-align: center;
+	background-color: white;
 }
 		.gallery1Image {
 			display: inline-block;
-			width: 30%;
+			width: 25%;
 			min-width: 280px;
 			height: auto;
 			box-sizing: border-box;
+			margin-top: 40px;
 		}
-
-
 
 
 .gallerycontainer2 {
 	width: 100%;
 	height: auto;
-	min-height: 550px;
 	margin: 0 auto;
 	text-align: center;
 	background-color: #F0F2F2;
 }
 	.subText {
+	width: 100%;
+	display: inline-block;
 	padding-top: 30px;
 	text-align: center;
 
@@ -112,43 +122,25 @@ input {
 	}
 	.gallery2Image {
 		display: inline-block;
-		width: 300px;
-		height: 350px;
+		width: 30%;
+		height: auto;
 		min-width: 300px;
 		box-sizing: border-box;
-		margin-left: 75px;
-  		margin-right: 75px;
-    	margin-top: 10px;
-
-	}
-	.gallery2Image img{
-		width: 250px;
-		height: 250px;
-	}
+		vertical-align: middle;
 
 
-.gallerycontainer3 {
-	width: 75%;
-	margin: 0 auto;
-	text-align: center;
-}
-		.gallery3Image1 {
-			float: left;
-			width: 300px;
-			height: 350px;
+
+
+	/*
+.gallery3Image1 {
+			display: inline-block;
+			width:40%;
+			min-width: 300px;
 			height: auto;
 			box-sizing: border-box;
 			margin-left: 100px;
+			margin: 20px;
 		}
-		.gallery3Image2 {
-			float: right;
-			width: 300px;
-			height: 350px;
-			height: auto;
-			box-sizing: border-box;
-			margin-right: 100px;
-		}
-
 
 
 

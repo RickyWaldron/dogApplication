@@ -13,11 +13,13 @@ html
 			
 			div(class="site-pusher1")
 				include nav.pug
+
 				div(class="container")
 
 					div(class="filling")
 
 					div(class="frontText")
+
 						h1 “Sometimes you just need a fluffy
 						h1 friend that you can 
 						h1 meet with from time to time”
@@ -32,10 +34,10 @@ html
 
 							div(class='gallery1Image')
 								img(src="images/002home-dog.png")
-								p Lonley Dog
+								p Lonely Dog
 					div(class='signup')
 						input(class= "button" id="signupButton" type="button" value="SIGN-UP !")
-					div(class="filling")
+					div(class="filling1")
 
 
 					div(class="gallerycontainer2")
@@ -46,7 +48,7 @@ html
 							img(src="images/003home-local.png")
 							h2 Local
 							p(class="line1")
-							p A short description of the benefits of using this service.
+							p You can find your dog friend in your own neighborhood.
 
 						div(class="gallery2Image")
 							img(src="images/004home-cosy.png")
@@ -59,21 +61,23 @@ html
 							p(class="line1")
 							p You can choose when you are available and enjoy your part time friend. 
 
-					div(class="gallerycontainer3")
+					div(id="wbackground" class="gallerycontainer2")
 						div(class='subText')
 							h2 THEY JOINED ALREADY
 
-						div(class="gallery3Image1")
+						div(class="gallery2Image")
 							img(src="images/006home-charmer.jpg")
 							h2 Charmer & John
-							p(class="line1")
+							p(class="line2")
 							p "Since I met Charmer, I am happy everyday"
 
-						div(class="gallery3Image2")
+						div(class="gallery2Image")
 							img(src="images/007home-anita.jpg")
 							h2 Bello & Anita
-							p(class="line1")
+							p(class="line2")
 							p "My Friday with Bello is the most fun day of the week!"
+	
+				include footer.pug
 
 
 
