@@ -61,7 +61,7 @@ html
 
 							div(class="formDIV")
 								div(class="containerSignupSheetPerson")
-									Form(class="signupSheetDogLover", ACTION="/signupFormDogLover", method="POST")
+									form(class="signupSheetDogLover", ACTION="/signupFormDogLover", method="POST", enctype="multipart/form-data")
 										div(class="formElement")
 											p(class="title") Please tell us something about yourself:
 											input(class="aboutMe", type="text", name="about", placeholder="About me" id="aboutDog")

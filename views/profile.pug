@@ -16,21 +16,22 @@ html
 				div(class="container")
 					div(class="filling")
 					div(class="containerMatchGallery")
-						- for (var j=0; j < doginfo[0].rows.length; j++)
-							div(class="oneMatch")
-								div(class="dogInfo" id="dogname") Meet #{doginfo[0].rows[j].dogname}!
-								div(class="dogInfo")
-									img(class="dogProfilePicture", src=doginfo[0].rows[j].picture)
-								div(class="dogInfo" id="dogname2") #{doginfo[0].rows[j].dogname}
-								div(class="dogInfo" id="aboutdog") #{doginfo[0].rows[j].aboutdog}
-								div(class="dogInfo" id="sizedog") Size: #{doginfo[0].rows[j].size}
-							
-						- for (var i=0; i < userinfo[0].rows.length; i++)
-							div(class="oneMatch")
-								div(class="profileInfo" id="owner") Meet the owner!
-								div(class="profileInfo")
-									img(class="profilePicture", src=userinfo[0].rows[i].picture)
-								div(class="profileInfo" id="firstname") #{userinfo[0].rows[i].firstname}
-								div(class="profileInfo" id="aboutme") #{userinfo[0].rows[i].about}
+						if(dogOwner)
+							- for (var j=0; j < doginfo[0].rows.length; j++)
+								div(class="oneMatch")
+									div(class="dogInfo" id="dogname") Meet #{doginfo[0].rows[j].dogname}!
+									div(class="dogInfo") 
+										img(class="dogProfilePicture", src="uploads/"+doginfo[0].rows[j].picture)
+									div(class="dogInfo" id="dogname2") #{doginfo[0].rows[j].dogname}
+									div(class="dogInfo" id="aboutdog") #{doginfo[0].rows[j].aboutdog}
+									div(class="dogInfo" id="sizedog") Size: #{doginfo[0].rows[j].size}
+						else if(dogOwner == false)	
+							- for (var i=0; i < userinfo[0].rows.length; i++)
+								div(class="oneMatch")
+									div(class="profileInfo" id="owner") Meet the owner!
+									div(class="profileInfo")
+										img(class="profilePicture", src="uploads/"+userinfo[0].rows[i].picture)
+									div(class="profileInfo" id="firstname") #{userinfo[0].rows[i].firstname}
+									div(class="profileInfo" id="aboutme") #{userinfo[0].rows[i].about}
 					div(class="containerMap")
 						img(class="map", src="/images/map.png")

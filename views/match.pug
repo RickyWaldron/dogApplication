@@ -20,7 +20,7 @@ html
 						- for (var i=0; i < allMatches[0].rows.length; i++)
 							div(class="oneMatch")
 								div(class="match")
-									img(class="matchPicture", src=allMatches[0].rows[i].picture)
+									img(class="matchPicture", src='uploads/'+allMatches[0].rows[i].picture)
 								div(class="match" id="namedog") #{allMatches[0].rows[i].dogname}
 								div(class="match" id="aboutdog") #{allMatches[0].rows[i].aboutdog}
 					div(class="containerMap")

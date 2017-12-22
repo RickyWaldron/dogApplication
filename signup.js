@@ -1,7 +1,7 @@
 require('dotenv').load();
 const bcrypt = require('bcrypt')
 const multer = require('multer')
-var upload = multer({ dest: 'uploads/' })
+var upload = multer({ dest: 'public/uploads/' })
 
 module.exports = (app, client) => {
 		app.get('/signupCheck', (req, res) => {
@@ -72,7 +72,7 @@ module.exports = (app, client) => {
 		})
 
 		app.post('/signupFormDog', upload.single('dogProfilePicture'), function(req, res, next) {
-			let dogProfilePicture = req.file.path
+			let dogProfilePicture = req.file.filename
 			let email = req.session.email
 			let dogname = req.body.dogname
 			let aboutDog = req.body.about
@@ -106,13 +106,16 @@ module.exports = (app, client) => {
 			})
 		
 		app.post('/signupFormDoglover', upload.single('profilePicture'), function(req, res, next) {
-			let profilePicture = req.file.path
+			let profilePicture = req.file.filename
+			console.log(req.file)
+			console.log(profilePicture)
 			let email = req.session.email
 			let aboutMe = req.body.about
 			let smallDog = req.body.smallDogButton
 			let mediumDog = req.body.mediumDogButton
 			let largeDog = req.body.largeDogButton
 			let sizeDog = ""
+
 			if(smallDog === "small"){
 				sizeDog = smallDog
 			}
@@ -122,13 +125,14 @@ module.exports = (app, client) => {
 			if(largeDog === "large"){
 				sizeDog = largeDog
 			}
+			console.log(sizeDog)
 			const query = {
 					text: 	(`UPDATE users SET 
 							size='${sizeDog}', about='${aboutMe}', picture='${profilePicture}' WHERE email='${email}'`)
 						}
 			client.query(query, (error, result) => {
 				if (error) throw error
-			res.redirect('match')
+			res.redirect('/match')
 				})
 			})
 		}

@@ -5,12 +5,12 @@ const app = express()
 const fs = require('fs')
 var session = require('express-session')
 const bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded())
 const queryParser = require('query-parser')
 const bcrypt = require('bcrypt')
-const multer = require('multer')
-var upload = multer({ dest: 'uploads/' })
-var port = process.env.port
 
+
+var port = process.env.port
 
 app.use(session({
     secret: process.env.secret,
@@ -20,7 +20,6 @@ app.use(session({
 
 const pg = require('pg')
 const Client = pg.Client
-
 const client = new Client({
     user: process.env.user,
     host: 'localhost',
@@ -28,9 +27,8 @@ const client = new Client({
     password: process.env.password,
     port: 5432,
 })
-
 client.connect()
-app.use(bodyParser.urlencoded())
+
 app.set('view engine', 'pug')
 app.use(express.static('public'));
 
