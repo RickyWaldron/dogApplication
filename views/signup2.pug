@@ -29,11 +29,11 @@ html
 									form(class="signupSheetDog", ACTION="/signupFormDog", method="POST", enctype="multipart/form-data")
 										div(class="formElement")
 											p(class="title") Please enter the name of your Dog:
-											input(class="dogname", type="text", name="dogname", value="dogname")
+											input(class="dogname", type="text", name="dogname", required)
 										
 										div(class="formElement")
 											p(class="title") Tell something about your Dog:
-											input(class="aboutDog", type="text", name="about", placeholder="About dog" id="aboutDog")
+											input(class="aboutDog", type="text", name="about", placeholder="About dog" id="aboutDog" required)
 
 										div(class="UploadPictureDiv")
 											p(class="title") Upload a picture of your Dog!
@@ -62,7 +62,7 @@ html
 									form(class="signupSheetDogLover", ACTION="/signupFormDogLover", method="POST", enctype="multipart/form-data")
 										div(class="formElement")
 											p(class="title") Please tell us something about yourself:
-											input(class="aboutMe", type="text", name="about", placeholder="About me" id="aboutDog")
+											input(class="aboutMe", type="text", name="about", placeholder="About me" id="aboutDog" required)
 
 										div(class="UploadPictureDiv")
 											p(class="title") Upload a profile picture!

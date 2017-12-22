@@ -104,8 +104,6 @@ module.exports = (app, client) => {
 		
 		app.post('/signupFormDoglover', upload.single('profilePicture'), function(req, res, next) {
 			let profilePicture = req.file.filename
-			console.log(req.file)
-			console.log(profilePicture)
 			let email = req.session.email
 			let aboutMe = req.body.about
 			let smallDog = req.body.smallDogButton
@@ -122,7 +120,6 @@ module.exports = (app, client) => {
 			if(largeDog === "large"){
 				sizeDog = largeDog
 			}
-			console.log(sizeDog)
 			const query = {
 					text: 	(`UPDATE users SET 
 							size='${sizeDog}', about='${aboutMe}', picture='${profilePicture}' WHERE email='${email}'`)

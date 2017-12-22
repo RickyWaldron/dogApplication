@@ -25,15 +25,15 @@ html
 							form(id="firstSignup", class="signupClass" ACTION="/signup")
 								div(class="formElement")
 									p(class="title") E-mail:
-									input(class="textField", id="email", type="email", name="email", value="email", placeholder="email")
+									input(class="textField", id="email", type="email", name="email", value="email", placeholder="email" required)
 									p(id="checkEmailText")
 								div(class="formElement")
 								div(class="formElement")
 									p(class="title") Password:
-									input(class="textField", id="password", type="password", name="password", password="password", placeholder="password")
+									input(class="textField", id="password", type="password", name="password", password="password", placeholder="password" required)
 								div(class="formElement" id="repTitle")
 									p(class="title" ) Repeat Password:
-									input(class="textField", id="passwordCheck", type="password", name="passwordCheck", password="password", placeholder="password check")
+									input(class="textField", id="passwordCheck", type="password", name="passwordCheck", password="password", placeholder="password check" required)
 								div(class="divbutton")
 									input(id="button" class="submitButton", type="submit", name="submit", value="Next step")
 									h2(id="text")

@@ -9,7 +9,6 @@ module.exports = (app, client) => {
 				userId = result.rows[0].id
 			client.query(`SELECT * FROM dogs WHERE size='${preferredSize}' AND user_id !='${userId}'`, (error, result) => {
 				let allMatches = []
-				console.log(result.rows)
 				allMatches.push(result)
 				res.render("match", {email: req.session.email, allMatches: allMatches})
 				})
@@ -31,7 +30,6 @@ module.exports = (app, client) => {
 					req.session.dogowner = dogOwner
 					client.query(`SELECT * FROM users WHERE size='${preferredSize}' AND id !='${userId}'`, (error, result) => {
 					let allMatches = []
-					console.log(result.rows)
 					allMatches.push(result)
 					res.render("matchPersons", {email: req.session.email, allMatches: allMatches, dogOwner: req.session.dogowner})
 					})

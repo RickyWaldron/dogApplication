@@ -13,7 +13,6 @@ module.exports = (app, client) => {
 					userinfo.push(result)
 					dogOwner = result.rows[0].dogowner
 					userId = result.rows[0].id
-					console.log(dogOwner)
 					if (dogOwner == true) {
 						req.session.dogowner = dogOwner
 						client.query(`SELECT * FROM dogs WHERE user_id='${userId}'`, (error, result) => {
@@ -22,7 +21,6 @@ module.exports = (app, client) => {
 						})
 					}	
 					else if(dogOwner == false) {
-						console.log(dogOwner)
 						req.session.dogowner = dogOwner
 						res.render("profile", {email: req.session.email, dogOwner: req.session.dogowner, userinfo: userinfo})
 					}
