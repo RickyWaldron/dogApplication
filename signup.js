@@ -96,7 +96,6 @@ module.exports = (app, client) => {
 						VALUES('${dogname}', '${sizeDog}', '${userId}', '${aboutDog}', '${dogProfilePicture}') RETURNING *`)
 				}
 				client.query(query2, (error, result) => {
-					console.log(result)
 					res.redirect('/match')
 				})
 			})
