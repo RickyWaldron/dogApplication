@@ -30,11 +30,11 @@ html
 									form(class="signupSheetDog", ACTION="/signupFormDog", method="POST", enctype="multipart/form-data")
 										div(class="formElement")
 											p(class="title") Please enter the name of your Dog:
-											input(class="dogname", type="text", name="dogname", value="dogname")
+											input(class="dogname", type="text", name="dogname", required)
 										
 										div(class="formElement")
 											p(class="title") Tell something about your Dog:
-											input(class="aboutDog", type="text", name="about", placeholder="About dog" id="aboutDog")
+											input(class="aboutDog", type="text", name="about", placeholder="About dog" id="aboutDog" required)
 
 										div(class="UploadPictureDiv")
 											p(class="title") Upload a picture of your Dog!
@@ -42,8 +42,6 @@ html
 											input(class="dogProfilePicture", id="dogProfilePicture", type="file", name="dogProfilePicture")
 											label(for="dogProfilePicture")
 												img(src="images/form_addimg.png")
-											//- , accept="image/*", onchange="loadFile(event)")
-											//- img(class="outputDogPicture")
 										div(class="containerDogButtons")
 											p(class="title") What size is your Dog?
 											div(class="DogSeizeButtonsDiv")
@@ -65,15 +63,13 @@ html
 									form(class="signupSheetDogLover", ACTION="/signupFormDogLover", method="POST", enctype="multipart/form-data")
 										div(class="formElement")
 											p(class="title") Please tell us something about yourself:
-											input(class="aboutMe", type="text", name="about", placeholder="About me" id="aboutDog")
+											input(class="aboutMe", type="text", name="about", placeholder="About me" id="aboutDog" required)
 
 										div(class="UploadPictureDiv")
 											p(class="title") Upload a profile picture!
 											input(class="profilePicture", id="profilePicture", type="file", name="profilePicture")
 											label(for="profilePicture")
 												img(src="images/form_addimg.png")
-										//- , accept="image/*", onchange="loadFile2(event)")
-										//- img(class="outputProfilePicture")
 										div(class="containerDogButtons")
 											p(class="title") What is your Dog size preference?
 											div(class="DogSeizeButtonsDiv")
@@ -94,36 +90,17 @@ html
 
 
 	script.
-
-			//- function test() {
-			//- 		console.log("small dog")
-			//- 		$("#sDog").attr('src', "images/form_toggle_small-sel.png")
-			//- 		$('input[type="checkbox"]').not("#smallDogButton").prop('checked', false);
-
-			
-			//- 	}
-
-
 			$(document).ready(function() {
 				$(".signupSheetDog").hide()
 				$(".signupSheetDogLover").hide()
 				$(".dogProfileButton").click(function(){
 					$(".signupSheetDog").show()
 					$(".signupSheetDogLover").hide()
-					//- var loadFile = function(event) {
-					//- var output = document.getElementById('outputDogPicture')
-					//- output.src = URL.createObjectURL(event.target.files[0])
 					})
-				
 				$(".profileButton").click(function(){
 					$(".signupSheetDogLover").show()
-					$(".signupSheetDog").hide()
-					//- let loadFile2 = function(event) {
-					//- var output = document.getElementById('outputProfilePicture')
-					//- output.src = URL.createObjectURL(event.target.files[0])
-					
+					$(".signupSheetDog").hide()					
 				})
-
 			});
 
 
