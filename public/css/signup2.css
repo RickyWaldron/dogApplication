@@ -133,27 +133,6 @@ input {
 
 
 
-/*
-.check_box + label{
-    background:url('images/check-box.png') no-repeat;
-    height: 16px;
-    width: 16px;
-    display:inline-block;
-    padding: 0 0 0 0px;
-}
-
-
-	.formElement {
-		font-size: 80%;
-		font-weight: bold;
-	    color: #5a5854;
-	    margin-bottom: 0;
-	    width: 100%;
-	    display: inline-block;
-	    margin-left: 19%;
-	}
-
-
 
 
 
