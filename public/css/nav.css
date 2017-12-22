@@ -12,7 +12,31 @@ body {
 a {
   text-decoration: none;
   color: #33383a;
+  font-family: 'Open Sans', sans-serif;
 }
+
+body {
+  color: #3F5159;
+  background-color: #f0f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+input {
+  border-radius: 4px;
+  background-color: #f4f5f6;
+  border: 1px solid #CFD3D9;
+}
+
+
+.logout {
+  display: inline-block;
+}
+
 
 .container1 {
   overflow: hidden;

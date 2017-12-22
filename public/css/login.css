@@ -31,8 +31,6 @@ input {
 
 }
 
-
-
 	#button {
 		width: 175px;
 		height: 50px;
@@ -44,6 +42,8 @@ input {
 	    font-size: 16px;
 	    margin: 4px 2px;
 	    cursor: pointer;
+
+	    margin-top: 50px;
 	}
 	#button:hover {
 		background-color: #e4a123;
@@ -58,35 +58,73 @@ input {
 	}
 
 	.logincontainer {
-	    margin: 100px auto;
+	    margin: 75px auto;
 	    width: 80%;
-	    height: auto;
-	    background-color: red;
-	}
+	    
+
+	 }
 		.leftImg {
 			display: inline-block;
+			vertical-align: top;
 			width: 50%;
-			height: 687px;
+			min-width: 250px;
+			height: 400px;
 		    box-sizing: border-box;
 		    background-color: #039694;
+		    text-align: center;
 		}
 
-			.leftImg img{
-				margin: auto atuo;
-	
-			}
+		.leftImg img {
+			margin-top: 50px;
+		}
 
 		.loginForm {
+			vertical-align: top;
 			display: inline-block;
+			min-width: 250px;
 			width: 50%;
-			height: 687px;
+			height: 400px;
+			box-sizing: border-box;
 			background-color: white;
 			text-align: center;
 		}
 
+		.formElement {
+			display: inline-block;
+			width: 100%;
+			height: 50px;
+			font-size: 80%;
+			font-weight: bold;
+
+			
+		}
+
+		.formElement p {
+			margin-bottom: 2px;
+		}
+
+
+		#fpassword {
+			font-size: 60%;
+		}
 
 
 
+		@media screen and (max-width: 845px) {
+  		  .leftImg {
+  		  	display: none;
+       	
+ 		   }
+ 		   .logincontainer {
+ 		   	margin: 10px auto;
+
+ 		   }
+ 		   .loginForm {
+ 		   	display: block;
+ 		   	margin: 0 auto;
+
+ 		   }
+		}
 
 
 

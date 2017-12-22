@@ -57,13 +57,15 @@ input {
 	    margin-left: 19%;
 	}
 
+	.formElement p {
+		margin-bottom: 2px;
+	}
+
 	#repTitle {
 		margin-left: 20px;
 	}
 
-	.formElement p {
-		margin-bottom: 2px;
-	}
+
 
 	.firstSignup input:focus {
 		background-color: #ffffff;

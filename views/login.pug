@@ -1,6 +1,8 @@
 
 html
 	head
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
 		title Log In
 		script(src="https://code.jquery.com/jquery-3.2.1.js"
 			integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -19,10 +21,16 @@ html
 
 					div(class="logincontainer")
 						div(class="leftImg")
-							img(src="images/008login_img.png")
+							div(class="img1")
+								img(src="images/008login_img.png")
 						div(class="loginForm")
 							form(class="loginClass",action="/login", METHOD="POST")
 								h1(class="frontText") Log In!
-								input(class="textField", type="email", name="email", value="email", placeholder="email")
-								input(class="textField", type="password", name="password", password="password", placeholder="password")
+								div(class="formElement")
+									p E-mail:
+									input(class="textField", type="email", name="email", placeholder="email" required)
+								div(class="formElement")
+									p Password:
+									input(class="textField", type="password", name="password", password="password", placeholder="password" required)
 								input(class="submitButton", id="button" type="submit", name="submit", value="Login")
+								p(id="fpassword") forgot password?
