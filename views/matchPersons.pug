@@ -17,11 +17,12 @@ html
 					div(class="filling")
 					h2(class="h2") Find your person match
 					div(class="containerMatchGallery")
-						- for (var i=0; i < allMatches[0].rows.length; i++)
-							div(class="oneMatch")
-								div(class="match")
-									img(class="matchPicture", src="uploads/"+allMatches[0].rows[i].picture)
-								div(class="match" id="firstname") #{allMatches[0].rows[i].firstname}	
-								div(class="match" id="aboutme") #{allMatches[0].rows[i].about}
+						if(dogOwner)
+							- for (var i=0; i < allMatches[0].rows.length; i++)
+								div(class="oneMatch")
+									div(class="match")
+										img(class="matchPicture", src="uploads/"+allMatches[0].rows[i].picture)
+									div(class="match" id="firstname") #{allMatches[0].rows[i].firstname}	
+									div(class="match" id="aboutme") #{allMatches[0].rows[i].about}
 					div(class="containerMap")
 						img(class="map", src="/images/map.png")
