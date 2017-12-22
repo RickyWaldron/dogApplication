@@ -41,8 +41,6 @@ html
 											input(class="dogProfilePicture", id="dogProfilePicture", type="file", name="dogProfilePicture")
 											label(for="dogProfilePicture")
 												img(src="images/form_addimg.png")
-											//- , accept="image/*", onchange="loadFile(event)")
-											//- img(class="outputDogPicture")
 										div(class="containerDogButtons")
 											p(class="title") What size is your Dog?
 											div(class="DogSeizeButtonsDiv")
@@ -71,8 +69,6 @@ html
 											input(class="profilePicture", id="profilePicture", type="file", name="profilePicture")
 											label(for="profilePicture")
 												img(src="images/form_addimg.png")
-										//- , accept="image/*", onchange="loadFile2(event)")
-										//- img(class="outputProfilePicture")
 										div(class="containerDogButtons")
 											p(class="title") What is your Dog size preference?
 											div(class="DogSeizeButtonsDiv")
@@ -92,36 +88,17 @@ html
 
 
 	script.
-
-			//- function test() {
-			//- 		console.log("small dog")
-			//- 		$("#sDog").attr('src', "images/form_toggle_small-sel.png")
-			//- 		$('input[type="checkbox"]').not("#smallDogButton").prop('checked', false);
-
-			
-			//- 	}
-
-
 			$(document).ready(function() {
 				$(".signupSheetDog").hide()
 				$(".signupSheetDogLover").hide()
 				$(".dogProfileButton").click(function(){
 					$(".signupSheetDog").show()
 					$(".signupSheetDogLover").hide()
-					//- var loadFile = function(event) {
-					//- var output = document.getElementById('outputDogPicture')
-					//- output.src = URL.createObjectURL(event.target.files[0])
 					})
-				
 				$(".profileButton").click(function(){
 					$(".signupSheetDogLover").show()
-					$(".signupSheetDog").hide()
-					//- let loadFile2 = function(event) {
-					//- var output = document.getElementById('outputProfilePicture')
-					//- output.src = URL.createObjectURL(event.target.files[0])
-					
+					$(".signupSheetDog").hide()					
 				})
-
 			});
 
 

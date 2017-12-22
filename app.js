@@ -37,8 +37,6 @@ require("./matching.js")(app, client)
 require("./login.js")(app, client)
 require("./profile.js")(app, client)
 
-
-
 app.get('/', (req, res) => {
     res.render('index')
 })

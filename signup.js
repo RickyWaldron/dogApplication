@@ -4,9 +4,6 @@ const multer = require('multer')
 var upload = multer({ dest: 'public/uploads/' })
 
 module.exports = (app, client) => {
-		app.get('/signupCheck', (req, res) => {
-			res.render("signupCheck")
-		})
 		app.get("/signup", (req, res) => {
 			res.render("signup")
 		})
