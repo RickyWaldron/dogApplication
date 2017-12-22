@@ -6,16 +6,18 @@ html
 		
 		header.header1
 			a#header__icon1.header__icon1(href='#')
-			a.header__logo1(href='#') 
+			div(class="logo_image")
 				img(src="images/logotext.png" alt="logo")
+			
+				
 			nav.menu1
 				if(email)
-					a(href="/profile") profile
+
+					a(href="/profile") Profile
 					a(href="/match") Dog Matches
 					a(href="/matchPersons") Dog Friends
 					form(method="POST" action="logout" class="logout")
-							input(type="submit" id="submit" value="logout")
-
+							input(type="submit" id="submit" value="Logout")
 
 
 				else if(!email)
