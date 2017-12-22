@@ -64,7 +64,8 @@ input {
 
 	 }
 		.leftImg {
-			float: left;
+			display: inline-block;
+			vertical-align: top;
 			width: 50%;
 			min-width: 250px;
 			height: 400px;
@@ -78,9 +79,12 @@ input {
 		}
 
 		.loginForm {
-			float: right;
+			vertical-align: top;
+			display: inline-block;
+			min-width: 250px;
 			width: 50%;
 			height: 400px;
+			box-sizing: border-box;
 			background-color: white;
 			text-align: center;
 		}
@@ -108,10 +112,17 @@ input {
 
 		@media screen and (max-width: 845px) {
   		  .leftImg {
+  		  	display: none;
        	
  		   }
  		   .logincontainer {
  		   	margin: 50px auto;
+
+ 		   }
+ 		   .loginForm {
+ 		   	display: block;
+ 		   	margin: 0 auto;
+
  		   }
 		}
 
