@@ -86,8 +86,8 @@ module.exports = (app, client) => {
 			if(largeDog === "large"){
 				sizeDog = largeDog
 			}
-			client.query(`UPDATE users SET size='${sizeDog}' WHERE email='${email}'`, (error, result) => {
-			})	
+			// client.query(`UPDATE users SET size='${sizeDog}' WHERE email='${email}'`, (error, result) => {
+			// })	
 			client.query(`SELECT id FROM users WHERE email='${email}'`, (error, result) => {
 				if (error) throw error
 				userId = result.rows[0].id

@@ -28,7 +28,7 @@ module.exports = (app, client) => {
 				userId = result.rows[0].id
 				if (dogOwner == true) {
 					req.session.dogowner = dogOwner
-					client.query(`SELECT * FROM users WHERE size='${preferredSize}' AND id !='${userId}'`, (error, result) => {
+					client.query(`SELECT * FROM users WHERE size='${preferredSize}' AND id !='${userId}' AND dogowner='${false}'`, (error, result) => {
 					let allMatches = []
 					allMatches.push(result)
 					res.render("matchPersons", {email: req.session.email, allMatches: allMatches, dogOwner: req.session.dogowner})

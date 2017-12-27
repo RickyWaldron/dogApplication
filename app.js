@@ -25,7 +25,7 @@ const client = new Client({
     host: 'localhost',
     database: process.env.database,
     password: process.env.password,
-    port: 5432,
+    port: process.env.portdatabase,
 })
 client.connect()
 
@@ -48,5 +48,4 @@ app.listen(port, () => {
 app.post('/logout', function (req, res) {
     req.session.destroy();
     res.redirect('/')
-
 })
