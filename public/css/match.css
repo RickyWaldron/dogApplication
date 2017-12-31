@@ -4,16 +4,17 @@
 }
 
 .containerMatchGallery{
-	margin-left: 25px;
+	margin-left: 5px;
 	width: 55%;
 	height: 90%;
 	float: left;
 }
 .containerMap{
 	float: right;
-	width: 41%;
+	width: 40%;
 	height: 100%;
 	margin-top: 20px;
+	margin-right: 20px;
 }
 
 .oneMatch{
@@ -40,7 +41,7 @@
 .h2{
 	color: #3F5159;
 	width: 300px;
-	margin-left: 25px;
+	margin-left: 15px;
 }
 
 #aboutme{

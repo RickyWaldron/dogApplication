@@ -1,6 +1,6 @@
 html
 	head
-		title People matches
+		title Match locations
 		script(src="https://code.jquery.com/jquery-3.2.1.js"
 			integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 			crossorigin="anonymous"
@@ -16,19 +16,10 @@ html
 				include nav.pug
 				div(class="container")
 					div(class="filling")
-					h2(class="h2") Find your person match
+					h2(class="h2") Find your dog match
 					div(class="containerMatchGallery")
-						if(dogOwner)
-							- for (var i=0; i < allMatches.length; i++)
-								div(class="oneMatch")
-									div(class="match")
-										img(class="matchPicture", src="uploads/"+allMatches[i].picture)
-									div(class="match" id="firstname") #{allMatches[i].firstname}	
-									div(class="match" id="aboutme") #{allMatches[i].about}
-
 					div(class="containerMap")
-						div(class="map", id="map_canvas")
-
+						div(class="map" id="map_canvas")
 		script.
 			$(document).ready(function(){
 				jQuery(function($) {
@@ -53,10 +44,10 @@ html
 					var data = !{JSON.stringify(allMatches).replace(/<\//g, '<\\/')}
 					var infoWindowContent = []
 					var markers = []
-					for (var j = 0; j < data.length; j++) {
-					markers.push([data[j].firstname, data[j].latitude, data[j].longitude])
+					for (var j = 0; j < data[0].rows.length; j++) {
+					markers.push([data[0].rows[j].firstname, data[0].rows[j].latitude, data[0].rows[j].longitude])
 					console.log("these are the markers: " + markers)
-						infoWindowContent.push([data[j].firstname])
+						infoWindowContent.push([data[0].rows[j].firstname])
 					}
 						
 					// Display multiple markers on a map
