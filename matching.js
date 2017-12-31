@@ -23,8 +23,7 @@ module.exports = (app, client) => {
 				console.log(lat1)
 				console.log(lon1)
 				
-				client.query(`SELECT * FROM dogs WHERE id !='${userId}' AND size='${preferredSize}'`, (errorDist, resultDist) => {
-					console.log(resultDist.rows.length)
+				client.query(`SELECT * FROM dogs WHERE user_id !='${userId}' AND size='${preferredSize}'`, (errorDist, resultDist) => {
 					let allMatches = []
 					let allDistances = []	
 					if (resultDist.rows.length > 0) {
@@ -50,7 +49,6 @@ module.exports = (app, client) => {
 							console.log("distance of no matches : " + d)
 							}		
 						}
-							console.log(allMatches)
 							res.render("match", {email: req.session.email, allMatches: allMatches})
 						}		
 						else {
