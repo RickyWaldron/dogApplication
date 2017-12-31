@@ -103,7 +103,7 @@ module.exports = (app, client) => {
 				}
 				else if(dogOwner == false) {
 						req.session.dogowner = dogOwner
-						res.render("match", {email: req.session.email, dogOwner: req.session.dogowner})
+						res.redirect("/match")
 					}
 			})		
 		}
