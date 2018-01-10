@@ -7,7 +7,7 @@ var NodeGeocoder = require('node-geocoder');
             var options = {
               provider: 'google',
               httpAdapter: 'https', 
-              apiKey: 'AIzaSyBCDnmxmEQFoz4ydD7kKiWBlwvf2lnZbAg', 
+              apiKey: process.env.apikey, 
               formatter: null
             };
             var geocoder = NodeGeocoder(options);
@@ -23,8 +23,10 @@ module.exports = (app, client) => {
 			res.render("signupInformation", {email: req.session.email})
 		})
 		app.post('/signup', function(req, res) {
+			
 			let email = req.body.email
 			let password = req.body.password
+			
 			const query = {
                   	text: (`SELECT * FROM users WHERE email='${email}'`)
                     }
@@ -32,7 +34,6 @@ module.exports = (app, client) => {
 					if (error) throw error
 						let ajax = req.body.ajax
 						if (result.rows.length == 1){
-
 						let existingUser = result.rows[0].email
 						ajax = false	
 						res.send({existingUser, ajax})		
@@ -69,6 +70,7 @@ module.exports = (app, client) => {
 			  .then(function(result) {
 			  	latitude = result[0].latitude
 			  	longitude = result[0].longitude
+			  	console.log(latitude + "lon" + longitude)
 			  	const query = {
 						text: 	(`UPDATE users SET 
 								firstname='${firstname}', lastname='${lastname}', age='${age}', dogowner='${dogowner}',

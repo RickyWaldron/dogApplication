@@ -16,13 +16,11 @@ html
 				include nav.pug
 				div(class="container")
 					div(class="filling")
-
 					div(class="containerSignup")
 						div(class="frontText")
 							h1 Personal Information
 						div(class="formDIV")
 							FORM(id="informationSignup", class="informationSignupClass", ACTION="/signupInformation", METHOD="post")
-
 								div(class="formElement")
 									p(class="title") firstname:
 									input(class="textField", id="firstname", type="text", name="firstname", placeholder="firstname" required)

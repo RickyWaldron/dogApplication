@@ -30,9 +30,11 @@ html
 		script.
 			$(document).ready(function(){
 				jQuery(function($) {
+					console.log(#{process.env.apiKey})
+					
 					// Asynchronously Load the map API 
 					var script = document.createElement('script');
-					script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyCW8wq7VM5e8qslCr9U_aKyoVLEkf8r4LU&callback=initialize";
+					script.src = "//maps.googleapis.com/maps/api/js?key=#{process.env.apikey}&callback=initialize";
 					document.body.appendChild(script);
 					});
 					

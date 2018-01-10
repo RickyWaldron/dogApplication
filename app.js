@@ -36,6 +36,7 @@ require("./signup.js")(app, client)
 require("./matching.js")(app, client)
 require("./login.js")(app, client)
 require("./profile.js")(app, client)
+require("./webpack.config.js")
 
 app.get('/', (req, res) => {
     res.render('index')

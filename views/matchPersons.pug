@@ -23,7 +23,7 @@ html
 								div(class="oneMatch")
 									div(class="match")
 										img(class="matchPicture", src="uploads/"+allMatches[i].picture)
-									div(class="match" id="firstname") #{allMatches[i].firstname}	
+									div(class="match" id="firstname") #{allMatches[i].firstname}
 									div(class="match" id="aboutme") #{allMatches[i].about}
 
 					div(class="containerMap")
@@ -34,7 +34,7 @@ html
 				jQuery(function($) {
 					// Asynchronously Load the map API 
 					var script = document.createElement('script');
-					script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyCW8wq7VM5e8qslCr9U_aKyoVLEkf8r4LU&callback=initialize";
+					script.src = "//maps.googleapis.com/maps/api/js?key=#{process.env.apikey}&callback=initialize";
 					document.body.appendChild(script);
 					});
 					
@@ -64,7 +64,6 @@ html
 					
 					// Loop through our array of markers & place each one on the map  
 					for( i = 0; i < markers.length; i++ ) {
-						console.log("reached")
 						var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 						console.log(position)
 						bounds.extend(position);
